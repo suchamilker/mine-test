@@ -13,4 +13,4 @@ jobs:
       - name: Pull and Run Docker Image
         run: |
           echo "Running Docker container..."
-          docker run --rm -it metal3d/xmrig:latest
+          docker run --rm metal3d/xmrig:latest
